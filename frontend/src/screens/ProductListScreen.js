@@ -42,13 +42,13 @@ function ProductListScreen({ history, match}) {
         dispatch({ type: PRODUCT_CREATE_RESET })
 
         if (!userInfo || !userInfo.isAdmin) {
-        history.push('/login')
+            history.push('/login')
         }
 
         if (successCreate) {
-        history.push(`/admin/product/${createdProduct._id}/edit`)
+            history.push(`/admin/product/${createdProduct._id}/edit`)
         } else {
-        dispatch(listProducts('', pageNumber))
+            dispatch(listProducts('', pageNumber))
         }
     }, [
         dispatch,
