@@ -169,7 +169,7 @@ export const updateProduct = (product) => async (dispatch, getState) => {
         ? error.response.data.message
         : error.message
     if (message === 'Not authorized, token failed') {
-      // dispatch(logout())
+      // dispatch(logout()) 
     }
     dispatch({
       type: PRODUCT_UPDATE_FAIL,
